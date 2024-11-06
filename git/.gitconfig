@@ -3,3 +3,5 @@
 	name = Simon Westlin Green
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
