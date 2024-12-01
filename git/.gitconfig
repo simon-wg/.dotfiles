@@ -1,0 +1,7 @@
+[user]
+	email = simon.green@live.se
+	name = Simon Westlin Green
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
