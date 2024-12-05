@@ -22,6 +22,7 @@ alias la="ls -la"
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/zoxide",   from:oh-my-zsh
 zplug "mafredri/zsh-async", from:github
+zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "MichaelAquilina/zsh-you-should-use"
 zplug "sunlei/zsh-ssh"
