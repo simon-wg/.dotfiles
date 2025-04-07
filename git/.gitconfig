@@ -6,7 +6,6 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
-	gpgSign = true
 [commit]
 	gpgSign = true
 [tag]
