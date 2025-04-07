@@ -48,3 +48,11 @@
 #network {
     margin-right: 0.8em;
 }
+
+#battery.discharging.warning {
+    color: orange
+}
+
+#battery.discharging.critical {
+    color: red
+}

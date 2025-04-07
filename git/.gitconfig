@@ -1,7 +1,13 @@
 [user]
 	email = simon.green@live.se
 	name = Simon Westlin Green
+	signingKey = 9B5CEFAF2E6FA542
 [init]
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+	gpgSign = true
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
