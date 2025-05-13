@@ -1,7 +1,7 @@
 [user]
 	email = simon.green@live.se
 	name = Simon Westlin Green
-  signingKey = C40D1D5D3D43A514
+  signingKey = 46D780AE76BC7EC0
 [init]
 	defaultBranch = main
 [push]
