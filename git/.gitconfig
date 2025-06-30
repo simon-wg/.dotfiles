@@ -1,7 +1,9 @@
 [user]
 	email = simon.green@live.se
 	name = Simon Westlin Green
-  signingKey = 46D780AE76BC7EC0
+  	signingKey = 46D780AE76BC7EC0
+[includeIf "gitdir:~/Programming/work/**"]
+	path = ~/Programming/work/.gitconfig
 [init]
 	defaultBranch = main
 [push]
