@@ -2,19 +2,24 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# Created by `pipx` on 2025-05-24 10:10:28
-set PATH $PATH /home/simon-wg/.local/bin
-
 set EDITOR nvim
 
 starship init fish | source
 zoxide init fish | source
 
-# opencode
-fish_add_path /home/swestli1/.opencode/bin
+switch $hostname
+    case '5CG04891L4'
+        fish_add_path ~/.opencode/bin
+        fish_add_path ~/.opencode/bin
+        fish_add_path ~/.pyenv/bin
+    case '*'
+		fish_add_path ~/.local/share/gem/ruby/3.4.0/bin
+		fish_add_path ~/.local/share/gem/ruby/3.4.0/bin
+end
 
-# Created by `pipx` on 2025-07-03 07:13:58
-set PATH $PATH /home/swestli1/.local/bin
+fish_add_path ~/.local/bin
+fish_add_path ~/.bun/bin
+fish_add_path ~/.cargo/bin
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
