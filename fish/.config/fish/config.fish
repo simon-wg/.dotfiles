@@ -9,3 +9,13 @@ set EDITOR nvim
 
 starship init fish | source
 zoxide init fish | source
+
+# opencode
+fish_add_path /home/swestli1/.opencode/bin
+
+# Created by `pipx` on 2025-07-03 07:13:58
+set PATH $PATH /home/swestli1/.local/bin
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
