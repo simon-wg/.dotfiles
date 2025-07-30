@@ -12,7 +12,7 @@ vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
 
 vim.pack.add({
-		{src = "https://github.com/ellisonleao/gruvbox.nvim"},
+		{src = "https://github.com/loctvl842/monokai-pro.nvim"},
 		{src = "https://github.com/neovim/nvim-lspconfig"},
 		{src = "https://github.com/mason-org/mason.nvim"}
 })
@@ -21,4 +21,4 @@ require("mason").setup()
 
 vim.lsp.enable({"lua_ls", "vtsls"})
 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme monokai-pro")
