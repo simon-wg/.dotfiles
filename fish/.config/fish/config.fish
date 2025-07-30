@@ -5,5 +5,7 @@ end
 # Created by `pipx` on 2025-05-24 10:10:28
 set PATH $PATH /home/simon-wg/.local/bin
 
+set EDITOR nvim
+
 starship init fish | source
 zoxide init fish | source
