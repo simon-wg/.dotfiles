@@ -14,11 +14,12 @@ vim.keymap.set('n', '<leader>q', ':quit<CR>')
 vim.pack.add({
 		{src = "https://github.com/loctvl842/monokai-pro.nvim"},
 		{src = "https://github.com/neovim/nvim-lspconfig"},
-		{src = "https://github.com/mason-org/mason.nvim"}
+		{src = "https://github.com/mason-org/mason.nvim"},
+		{src = "https://github.com/Shatur/neovim-ayu"}
 })
 
 require("mason").setup()
 
 vim.lsp.enable({"lua_ls", "vtsls"})
 
-vim.cmd("colorscheme monokai-pro")
+vim.cmd("colorscheme ayu-mirage")
