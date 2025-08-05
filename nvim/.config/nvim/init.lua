@@ -5,8 +5,8 @@ vim.o.tabstop = 4
 vim.o.swapfile = false
 vim.o.signcolumn = "yes"
 vim.o.background = "dark"
+vim.o.winborder = "shadow"
 vim.g.mapleader = " "
-
 vim.keymap.set('n', '<leader>o', ':update<CR>:source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
