@@ -1,0 +1,14 @@
+[user]
+	email = simonwestlingreen@proton.me
+	name = Simon Westlin Green
+  	signingKey = 8B6707841AF02C24
+[includeIf "gitdir:~/Programming/work/**"]
+	path = ~/Programming/work/.gitconfig
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
