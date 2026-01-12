@@ -30,8 +30,8 @@ if status is-interactive
         set -p fish_complete_path (brew --prefix)/share/fish/completions
     end
     if test -d (brew --prefix)"/share/fish/vendor_completions.d"
-    set -p fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
-end
+        set -p fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+    end
     # Dirty fix to make sure homebrew binaries don't override native ones
     fish_add_path --move --prepend /usr/local/bin /usr/bin
     fish_add_path -p $HOME/.local/bin
