@@ -2,18 +2,19 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     set fish_greeting
     # Behavior for non-TTY sessions
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
     if not string match -q linux $TERM
         starship init fish | source
         zoxide init fish | source
         fish_config theme choose "Catppuccin Macchiato"
         alias fedora="distrobox enter fedora"
         alias ssh="TERM=xterm-256color ssh"
-        abbr --add ls eza
+        abbr --add ls "eza --icons"
         abbr --add l "eza --icons -l"
         abbr --add ll "eza --icons -l"
         abbr --add la "eza --icons -la"
         abbr --add lh "eza --icons -lh"
-        abbr --add tree "eza -T"
+        abbr --add tree "eza --icons -T"
         if type -q fnm
             fnm env --use-on-cd | source
         end
@@ -25,7 +26,6 @@ if status is-interactive
         set -gx VISUAL vim
         set -gx EDITOR vim
     end
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
     if test -d (brew --prefix)"/share/fish/completions"
         set -p fish_complete_path (brew --prefix)/share/fish/completions
     end
