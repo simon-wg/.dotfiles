@@ -25,9 +25,8 @@ if test -d (brew --prefix)"/share/fish/vendor_completions.d"
 end
 
 # Specifics for containers
-if test "$CONTAINER_ID"
+if test "$CONTAINER_ID"; or test "$hostname" != apollo
     set -gx NVIM_APPNAME nvim-full
-    alias snvim='sudo env PATH="$PATH" nvim'
 end
 
 # -----------------------------------------------------------------------------
@@ -49,6 +48,7 @@ if status is-interactive
 
         alias fedora="distrobox enter fedora"
         alias ssh="TERM=xterm-256color command ssh"
+        alias snvim='sudo env PATH="$PATH" nvim'
 
         # Eza aliases
         alias ls="eza --icons -F"
