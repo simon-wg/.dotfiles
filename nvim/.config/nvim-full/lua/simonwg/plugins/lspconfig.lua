@@ -326,18 +326,24 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         -- Lua
-        'lua_ls',
+        { 'lua-language-server', version = '3.16.4' },
         'stylua',
         -- Fish
-        'fish_lsp',
+        'fish-lsp',
         -- Python
         'ruff',
         'ty',
         -- Rust
-        'rust_analyzer',
+        'rust-analyzer',
         -- Go
         'gopls',
+        'goimports',
         'delve',
+        -- TS
+        'typescript-language-server',
+        'prettier',
+        'prettierd',
+        'eslint',
         -- Make
         'checkmake',
         -- C/Cpp

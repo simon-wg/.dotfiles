@@ -25,8 +25,9 @@ if test -d (brew --prefix)"/share/fish/vendor_completions.d"
 end
 
 # Specifics for containers
-if test "$CONTAINER_ID" = fedora; or test "$CONTAINER_ID" = debian; or test "$CONTAINER_ID" = real-time-systems
+if test "$CONTAINER_ID"
     set -gx NVIM_APPNAME nvim-full
+    alias snvim='sudo env PATH="$PATH" nvim'
 end
 
 # -----------------------------------------------------------------------------
@@ -34,6 +35,8 @@ end
 # -----------------------------------------------------------------------------
 if status is-interactive
     set fish_greeting
+
+    fish_default_key_bindings
 
     if type -q fnm
         fnm env --use-on-cd --shell fish | source
