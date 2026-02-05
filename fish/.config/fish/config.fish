@@ -48,7 +48,7 @@ if status is-interactive
         fish_config theme choose "Catppuccin Macchiato"
 
         alias fedora="distrobox enter fedora"
-        alias ssh="TERM=xterm-256color ssh"
+        alias ssh="TERM=xterm-256color command ssh"
 
         # Eza aliases
         alias ls="eza --icons -F"
