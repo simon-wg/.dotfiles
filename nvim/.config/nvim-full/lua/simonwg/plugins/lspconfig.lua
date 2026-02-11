@@ -306,6 +306,15 @@ return {
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
               -- diagnostics = { disable = { 'missing-fields' } },
             },
+            -- INFO: This snippet is in order to let lazylua work with newer lua_ls versions
+            workspace = {
+              checkThirdParty = false,
+              library = {
+                vim.env.VIMRUNTIME,
+                { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+                -- { path = "snacks.nvim", words = { "Snacks" } }, -- others you need to load
+              },
+            },
           },
         },
       }
@@ -326,7 +335,7 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         -- Lua
-        { 'lua-language-server', version = '3.16.4' },
+        'lua-language-server',
         'stylua',
         -- Fish
         'fish-lsp',
@@ -350,6 +359,8 @@ return {
         'clangd',
         -- TOML/more
         'tombi',
+        -- TS
+        'typescript-language-server',
       })
       require('mason-tool-installer').setup {
         ensure_installed = ensure_installed,
