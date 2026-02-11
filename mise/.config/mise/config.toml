@@ -1,0 +1,16 @@
+[tools]
+# For Mise
+usage = "latest"
+# CLI Tools
+ripgrep = "latest"
+fzf = "latest"
+eza = "latest"
+starship = "latest"
+zoxide = "latest"
+neovim = "latest"
+# Languages
+node = "lts"
+python = "3.12"
+go = "latest"
+# Miscellaneous
+tree-sitter = "latest"
