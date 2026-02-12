@@ -298,68 +298,31 @@ return {
           -- cmd = { ... },
           -- filetypes = { ... },
           -- capabilities = {},
-          on_init = function(client)
-            if client.workspace_folders then
-              local path = client.workspace_folders[1].name
-              if
-                vim.uv.fs_stat(path .. '/.luarc.json')
-                or vim.uv.fs_stat(path .. '/.luarc.jsonc')
-              then
-                return
-              end
-            end
-
-            client.config.settings.Lua =
-              vim.tbl_deep_extend('force', client.config.settings.Lua, {
-                runtime = {
-                  version = 'LuaJIT',
-                },
-                -- Make the server aware of Neovim runtime files
-                workspace = {
-                  checkThirdParty = false,
-                  library = {
-                    vim.env.VIMRUNTIME,
-                    vim.fn.stdpath 'config',
-                    -- "${3rd}/luv/library"
-                    -- "${3rd}/busted/library",
-                  },
-                  -- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues with duplicate assets
-                  -- library = vim.api.nvim_get_runtime_file("", true)
-                },
-              })
-          end,
           settings = {
             Lua = {
               completion = {
                 callSnippet = 'Replace',
               },
-              diagnostics = {
-                globals = { 'vim' },
-              },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
               -- diagnostics = { disable = { 'missing-fields' } },
+            },
+            -- INFO: This snippet is in order to let lazylua work with newer lua_ls versions
+            workspace = {
+              checkThirdParty = false,
+              library = {
+                vim.env.VIMRUNTIME,
+                { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+                -- { path = "snacks.nvim", words = { "Snacks" } }, -- others you need to load
+              },
             },
           },
         },
       }
 
-      -- Ensure the servers and tools above are installed
-      --
-      -- To check the current status of installed tools and/or manually install
-      -- other tools, you can run
-      --    :Mason
-      --
-      -- You can press `g?` for help in this menu.
-      --
-      -- `mason` had to be setup earlier: to configure its options see the
-      -- `dependencies` table for `nvim-lspconfig` above.
-      --
-      -- You can add other tools here that you want Mason to install
-      -- for you, so that they are available from within Neovim.
-      local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, {
+      -- Add any tools for mason to install here
+      local ensure_installed = {
         -- Lua
-        'lua-language-server',
+        { 'lua-language-server', version = '3.16.4', auto_update = false },
         'stylua',
         -- Fish
         'fish-lsp',
@@ -385,9 +348,10 @@ return {
         'tombi',
         -- TS
         'typescript-language-server',
-      })
+      }
       require('mason-tool-installer').setup {
         ensure_installed = ensure_installed,
+        auto_update = true,
       }
 
       require('mason-lspconfig').setup {
