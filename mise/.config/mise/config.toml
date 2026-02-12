@@ -8,9 +8,9 @@ eza = "latest"
 starship = "latest"
 zoxide = "latest"
 neovim = "latest"
-# Languages
+gemini-cli = "latest"
+# Languages/Language tools
 node = "lts"
-python = "3.12"
+uv = "latest"
 go = "latest"
-# Miscellaneous
 tree-sitter = "latest"
