@@ -13,6 +13,21 @@ return {
     },
   },
   {
+    -- `rustaceanvim` configures rust-analyzer, as well as DAP for rust
+    -- Important to not have rust_analyzer in lspconfig enabled.
+    'mrcjkb/rustaceanvim',
+    version = '^7',
+    lazy = false,
+    config = function()
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
+      vim.g.rustaceanvim = {
+        server = {
+          capabilities = capabilities,
+        },
+      }
+    end,
+  },
+  {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -331,6 +346,7 @@ return {
         'ty',
         -- Rust
         'rust-analyzer',
+        'codelldb',
         -- Go
         'gopls',
         'goimports',
@@ -346,8 +362,6 @@ return {
         'clangd',
         -- TOML/more
         'tombi',
-        -- TS
-        'typescript-language-server',
       }
       require('mason-tool-installer').setup {
         ensure_installed = ensure_installed,
@@ -356,6 +370,11 @@ return {
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+        automatic_enable = {
+          exclude = {
+            'rust_analyzer',
+          },
+        },
         automatic_installation = false,
         handlers = {
           function(server_name)
