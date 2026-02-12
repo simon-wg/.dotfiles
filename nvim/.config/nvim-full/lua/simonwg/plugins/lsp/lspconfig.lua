@@ -342,6 +342,7 @@ return {
         -- Fish
         'fish-lsp',
         -- Python
+        'debugpy',
         'ruff',
         'ty',
         -- Rust
