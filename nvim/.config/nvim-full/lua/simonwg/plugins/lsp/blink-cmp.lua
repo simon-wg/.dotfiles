@@ -1,3 +1,6 @@
+-- Performant, batteries-included completion plugin for Neovim
+-- https://github.com/saghen/blink.cmp
+
 return {
   'saghen/blink.cmp',
   dependencies = { 'rafamadriz/friendly-snippets' },
@@ -51,3 +54,4 @@ return {
   },
   opts_extend = { 'sources.default' },
 }
+-- vim: ts=2 sts=2 sw=2 et
