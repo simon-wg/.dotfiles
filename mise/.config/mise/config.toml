@@ -10,7 +10,11 @@ zoxide = "latest"
 neovim = "latest"
 gemini-cli = "latest"
 # Languages/Language tools
-node = "lts"
-uv = "latest"
 go = "latest"
+lua = "5.1"
+node = "lts"
 tree-sitter = "latest"
+uv = "latest"
+
+[settings]
+experimental = true
