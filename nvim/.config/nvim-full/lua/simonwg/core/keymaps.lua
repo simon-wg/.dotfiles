@@ -62,8 +62,8 @@ vim.keymap.set(
 )
 
 -- Navigation between buffers
-vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Next Buffer' })
-vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Prev Buffer' })
+vim.keymap.set('n', '<leader><Tab>', ':bnext<CR>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '<leader><S-Tab>', ':bprev<CR>', { desc = 'Prev Buffer' })
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
