@@ -30,6 +30,7 @@ return {
     require('mini.starter').setup()
     require('mini.tabline').setup()
     require('mini.bufremove').setup()
+    require('mini.pairs').setup()
 
     -- You can configure sections in the statusline by overriding their
     -- default behavior. For example, here we set the section for
@@ -44,7 +45,7 @@ return {
   end,
   keys = {
     {
-      '<leader>d',
+      '<leader>Q',
       function()
         require('mini.bufremove').delete(0, false)
       end,

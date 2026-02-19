@@ -3,6 +3,8 @@
 
 return {
   'MeanderingProgrammer/render-markdown.nvim',
+  lazy = true,
+  event = 'BufEnter *.md',
   dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' }, -- if you use the mini.nvim suite
   opts = {},
 }
