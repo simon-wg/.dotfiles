@@ -10,7 +10,6 @@ ripgrep = "latest"
 starship = "latest"
 zoxide = "latest"
 # Languages/Language tools
-go = "latest"
 node = "lts"
 task = "latest"
 tree-sitter = "latest"
