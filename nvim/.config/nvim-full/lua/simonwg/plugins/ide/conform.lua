@@ -5,6 +5,30 @@ return {
   'stevearc/conform.nvim',
   event = { 'BufWritePre' },
   cmd = { 'ConformInfo' },
+  dependencies = {
+    {
+      'folke/snacks.nvim',
+      init = function()
+        vim.api.nvim_create_autocmd('User', {
+          pattern = 'LazyLoad',
+          callback = function()
+            require('snacks').toggle
+              .new({
+                id = 'format_on_save',
+                name = 'Format on Save',
+                get = function()
+                  return not vim.b.disable_autoformat
+                end,
+                set = function(state)
+                  vim.b.disable_autoformat = not state
+                end,
+              })
+              :map '<leader>tf'
+          end,
+        })
+      end,
+    },
+  },
   keys = {
     {
       '<leader>f',
@@ -18,11 +42,14 @@ return {
   opts = {
     notify_on_error = false,
     format_on_save = function(bufnr)
+      -- Disable with a buffer-local variable
+      if vim.b[bufnr].disable_autoformat then
+        return
+      end
       -- Disable "format_on_save lsp_fallback" for languages that don't
       -- have a well standardized coding style. You can add additional
       -- languages here or re-enable it for the disabled ones.
-      -- local disable_filetypes = { c = true, cpp = true }
-      local disable_filetypes = {}
+      local disable_filetypes = { c = true, cpp = true }
       if disable_filetypes[vim.bo[bufnr].filetype] then
         return nil
       else

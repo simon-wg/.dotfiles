@@ -16,6 +16,7 @@ return {
   'codelldb',
   -- Go
   'gopls',
+  'golangci-lint',
   'goimports',
   'delve',
   -- TS
@@ -24,10 +25,11 @@ return {
   'prettierd',
   'eslint',
   -- Make
-  'checkmake',
   -- C/Cpp
   'clangd',
-  -- TOML/more
+  -- Misc
+  'checkmake',
+  'just-lsp',
   'tombi',
 }
 -- vim: ts=2 sts=2 sw=2 et

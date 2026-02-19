@@ -2,17 +2,17 @@
 # For Mise
 usage = "latest"
 # CLI Tools
-ripgrep = "latest"
-fzf = "latest"
 eza = "latest"
+fastfetch = "latest"
+fzf = "latest"
+gemini-cli = "latest"
+ripgrep = "latest"
 starship = "latest"
 zoxide = "latest"
-neovim = "latest"
-gemini-cli = "latest"
 # Languages/Language tools
 go = "latest"
-lua = "5.1"
 node = "lts"
+task = "latest"
 tree-sitter = "latest"
 uv = "latest"
 
