@@ -24,7 +24,7 @@ return {
   'prettier',
   'prettierd',
   'eslint',
-  -- Make
+  'astro-language-server',
   -- C/Cpp
   'clangd',
   -- Misc
