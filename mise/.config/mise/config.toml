@@ -1,21 +1,22 @@
 [tools]
 # For Mise
 usage = "latest"
-# CLI Tools
-eza = "latest"
-fastfetch = "latest"
-fzf = "latest"
-gemini-cli = "latest"
-opencode = "latest"
-ripgrep = "latest"
-starship = "latest"
-zoxide = "latest"
 # Languages/Language tools
 go = "latest"
 node = "lts"
 task = "latest"
 tree-sitter = "latest"
 uv = "latest"
+# CLI Tools
+eza = "latest"
+fastfetch = "latest"
+fzf = "latest"
+"pipx:mistral-vibe" = "latest"
+opencode = "latest"
+ripgrep = "latest"
+starship = "latest"
+zoxide = "latest"
 
 [settings]
+auto_install = true
 experimental = true
