@@ -8,8 +8,10 @@ task = "latest"
 tree-sitter = "latest"
 uv = "latest"
 # CLI Tools
+direnv = "latest"
 eza = "latest"
 fastfetch = "latest"
+fd = "latest"
 fzf = "latest"
 "pipx:mistral-vibe" = "latest"
 opencode = "latest"
@@ -18,5 +20,4 @@ starship = "latest"
 zoxide = "latest"
 
 [settings]
-auto_install = true
 experimental = true
