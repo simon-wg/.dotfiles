@@ -7,7 +7,6 @@ task = "latest"
 tree-sitter = "latest"
 uv = "latest"
 # CLI Tools
-bitwarden = "latest"
 direnv = "latest"
 eza = "latest"
 fastfetch = "latest"
