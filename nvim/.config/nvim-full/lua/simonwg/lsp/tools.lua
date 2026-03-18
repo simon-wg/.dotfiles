@@ -20,7 +20,7 @@ return {
   'goimports',
   'delve',
   -- TS
-  'typescript-language-server',
+  'vtsls',
   'prettier',
   'prettierd',
   'eslint',
@@ -31,5 +31,6 @@ return {
   'checkmake',
   'just-lsp',
   'tombi',
+  'rpmspec',
 }
 -- vim: ts=2 sts=2 sw=2 et
