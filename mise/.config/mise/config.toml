@@ -1,5 +1,5 @@
 [tools]
-# For Mise
+# For Mise to work properly
 usage = "latest"
 # Languages/Language tools
 node = "lts"
@@ -15,8 +15,9 @@ fd = "latest"
 fnox = "latest"
 fzf = "latest"
 hk = "latest"
-"pipx:mistral-vibe" = "latest"
+"pipx:httpie" = "latest"
 opencode = "latest"
+pkl = "latest"
 ripgrep = "latest"
 starship = "latest"
 zoxide = "latest"
