@@ -1,3 +1,3 @@
 if test "$hostname" = apollo
-    alias dev="distrobox enter dev-fedora"
+    alias dev="distrobox enter devel"
 end
