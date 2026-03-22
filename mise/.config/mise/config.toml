@@ -8,6 +8,7 @@ task = "latest"
 tree-sitter = "latest"
 uv = "latest"
 # CLI Tools
+bat = "latest"
 "http:chafa" = { version = "1.18.1", url = "https://hpjansson.org/chafa/releases/static/chafa-1.18.1-1-x86_64-linux-gnu.tar.gz" }
 direnv = "latest"
 eza = "latest"
