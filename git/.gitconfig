@@ -1,7 +1,7 @@
 [user]
-	email = simonwestlingreen@proton.me
+	email = simon@simonwg.com
 	name = Simon Westlin Green
-  	signingKey = 8B6707841AF02C24
+	signingKey = 346607848E27D01B
 [includeIf "gitdir:~/Programming/work/**"]
 	path = ~/Programming/work/.gitconfig
 [init]
