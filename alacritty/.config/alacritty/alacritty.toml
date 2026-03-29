@@ -1,0 +1,6 @@
+[font]
+normal = { family = "Monaspace Krypton" }
+size = 16
+
+[colors]
+primary.background = "#222222"

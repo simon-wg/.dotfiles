@@ -15,19 +15,6 @@ return {
     },
   },
   {
-    -- Soothing pastel theme for the high-spirited!
-    -- https://github.com/catppuccin/nvim
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-macchiato'
-    end,
-    opts = {
-      auto_integrations = true,
-    },
-  },
-  {
     -- Plugin to improve viewing Markdown files in Neovim
     -- https://github.com/MeanderingProgrammer/render-markdown.nvim
     'MeanderingProgrammer/render-markdown.nvim',
@@ -52,7 +39,6 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
   },
-  'HiPhish/rainbow-delimiters.nvim', -- Rainbow delimiters for Neovim with Tree-sitter
   {
     -- Suda is a plugin to read or write files with sudo command
     'lambdalisue/vim-suda',

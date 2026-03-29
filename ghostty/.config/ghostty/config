@@ -56,5 +56,3 @@ font-feature = -calt
 
 window-decoration = none
 window-inherit-working-directory = false
-
-theme = catppuccin-macchiato.conf
